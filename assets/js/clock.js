@@ -40,15 +40,15 @@ function clock(){
 	var sec  = split_number(time.getSeconds());
 	document.getElementById("month_ten").innerHTML = make_tag(month[0]);
 	document.getElementById("month_one").innerHTML = make_tag(month[1]);
-	document.getElementById("slash").innerHTML = make_tag("_slash");
+	document.getElementById("slash").innerHTML = make_tag("slash");
 	document.getElementById("day_ten").innerHTML = make_tag(day[0]);
 	document.getElementById("day_one").innerHTML = make_tag(day[1]);
 	document.getElementById("hour_ten").innerHTML = make_tag(hour[0]);
 	document.getElementById("hour_one").innerHTML = make_tag(hour[1]);
-	document.getElementById("colon1").innerHTML = make_tag("_colon");
+	document.getElementById("colon1").innerHTML = make_tag("colon");
 	document.getElementById("minute_ten").innerHTML = make_tag(min[0]);
 	document.getElementById("minute_one").innerHTML = make_tag(min[1]);
-	document.getElementById("colon2").innerHTML = make_tag("_colon");
+	document.getElementById("colon2").innerHTML = make_tag("colon");
 	document.getElementById("second_ten").innerHTML = make_tag(sec[0]);
 	document.getElementById("second_one").innerHTML = make_tag(sec[1]);
 }
@@ -58,7 +58,7 @@ function rand(){
 	for(var i=0;i<rand_num.length;i++){
 		rand_num[i] = Math.floor(Math.random() * 10)
 	}
-	rand_num[1] = "_dot"
+	rand_num[1] = "dot"
 	document.getElementById("month_ten").innerHTML = make_tag("0");
 	document.getElementById("month_one").innerHTML = make_tag("0");
 	document.getElementById("slash").innerHTML = make_tag("0");
