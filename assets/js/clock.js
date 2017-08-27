@@ -3,6 +3,7 @@ cheet('↑ ↑ ↓ ↓ ← → ← → b a', function (){
 	clock_rand = setInterval(rand, 100);
 	setTimeout('stop()',2000)
 });
+
 window.onload = function(){
 	document.body.onclick = function(){
 		if(this.webkitRequestFullscreen){
