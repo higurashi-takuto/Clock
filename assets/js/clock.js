@@ -28,7 +28,7 @@ function split_number(num){
 }
 
 function make_tag(basename){
-	return "<img src=\"/assets/images/" + basename + ".png\">"
+	return "<img src=\"assets/images/" + basename + ".png\">"
 }
 
 function clock(){
