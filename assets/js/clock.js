@@ -29,7 +29,7 @@ function split_number(num){
 }
 
 function make_tag(basename){
-	return "<img src=\"assets/images/" + basename + ".png\">"
+	return "assets/images/" + basename + ".png"
 }
 
 function clock(){
@@ -39,19 +39,19 @@ function clock(){
 	var hour = split_number(time.getHours());
 	var min  = split_number(time.getMinutes());
 	var sec  = split_number(time.getSeconds());
-	document.getElementById("month_ten").innerHTML = make_tag(month[0]);
-	document.getElementById("month_one").innerHTML = make_tag(month[1]);
-	document.getElementById("slash").innerHTML = make_tag("slash");
-	document.getElementById("day_ten").innerHTML = make_tag(day[0]);
-	document.getElementById("day_one").innerHTML = make_tag(day[1]);
-	document.getElementById("hour_ten").innerHTML = make_tag(hour[0]);
-	document.getElementById("hour_one").innerHTML = make_tag(hour[1]);
-	document.getElementById("colon1").innerHTML = make_tag("colon");
-	document.getElementById("minute_ten").innerHTML = make_tag(min[0]);
-	document.getElementById("minute_one").innerHTML = make_tag(min[1]);
-	document.getElementById("colon2").innerHTML = make_tag("colon");
-	document.getElementById("second_ten").innerHTML = make_tag(sec[0]);
-	document.getElementById("second_one").innerHTML = make_tag(sec[1]);
+	document.getElementById("month_ten").src = make_tag(month[0]);
+	document.getElementById("month_one").src = make_tag(month[1]);
+	document.getElementById("slash").src = make_tag("slash");
+	document.getElementById("day_ten").src = make_tag(day[0]);
+	document.getElementById("day_one").src = make_tag(day[1]);
+	document.getElementById("hour_ten").src = make_tag(hour[0]);
+	document.getElementById("hour_one").src = make_tag(hour[1]);
+	document.getElementById("colon1").src = make_tag("colon");
+	document.getElementById("minute_ten").src = make_tag(min[0]);
+	document.getElementById("minute_one").src = make_tag(min[1]);
+	document.getElementById("colon2").src = make_tag("colon");
+	document.getElementById("second_ten").src = make_tag(sec[0]);
+	document.getElementById("second_one").src = make_tag(sec[1]);
 }
 
 function rand(){
@@ -60,19 +60,19 @@ function rand(){
 		rand_num[i] = Math.floor(Math.random() * 10)
 	}
 	rand_num[1] = "dot"
-	document.getElementById("month_ten").innerHTML = make_tag("0");
-	document.getElementById("month_one").innerHTML = make_tag("0");
-	document.getElementById("slash").innerHTML = make_tag("0");
-	document.getElementById("day_ten").innerHTML = make_tag("0");
-	document.getElementById("day_one").innerHTML = make_tag("0");
-	document.getElementById("hour_ten").innerHTML = make_tag(rand_num[0]);
-	document.getElementById("hour_one").innerHTML = make_tag(rand_num[1]);
-	document.getElementById("colon1").innerHTML = make_tag(rand_num[2]);
-	document.getElementById("minute_ten").innerHTML = make_tag(rand_num[3]);
-	document.getElementById("minute_one").innerHTML = make_tag(rand_num[4]);
-	document.getElementById("colon2").innerHTML = make_tag(rand_num[5]);
-	document.getElementById("second_ten").innerHTML = make_tag(rand_num[6]);
-	document.getElementById("second_one").innerHTML = make_tag(rand_num[7]);
+	document.getElementById("month_ten").src = make_tag("0");
+	document.getElementById("month_one").src = make_tag("0");
+	document.getElementById("slash").src = make_tag("0");
+	document.getElementById("day_ten").src = make_tag("0");
+	document.getElementById("day_one").src = make_tag("0");
+	document.getElementById("hour_ten").src = make_tag(rand_num[0]);
+	document.getElementById("hour_one").src = make_tag(rand_num[1]);
+	document.getElementById("colon1").src = make_tag(rand_num[2]);
+	document.getElementById("minute_ten").src = make_tag(rand_num[3]);
+	document.getElementById("minute_one").src = make_tag(rand_num[4]);
+	document.getElementById("colon2").src = make_tag(rand_num[5]);
+	document.getElementById("second_ten").src = make_tag(rand_num[6]);
+	document.getElementById("second_one").src = make_tag(rand_num[7]);
 }
 
 function stop(){
