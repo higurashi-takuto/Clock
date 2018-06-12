@@ -1,0 +1,30 @@
+
+@import url("./TimeLeap.css");
+
+@charset "utf-8";
+
+html, body, p {
+  margin: 0;
+  padding: 0;
+  overflow: visible;
+  text-transform: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  background: transparent;
+}
+
+body {
+  background-color: #000;
+}
+
+p {
+  font-family: "TimeLeap", monospace;
+  font-weight: 400;
+  color: #f00;
+  font-size: 4vw;
+  text-align: center;
+  text-shadow: 0px 0px 10px #f00, 0px 0px 20px #f00;
+  vertical-align: baseline;
+  line-height: 100vh;
+}

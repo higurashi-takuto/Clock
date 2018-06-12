@@ -1,0 +1,9 @@
+
+@font-face {
+  font-family: "TimeLeap";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/TimeLeap.woff2") format("woff2"),
+       url("../fonts/TimeLeap.woff") format("woff"),
+       url("../fonts/TimeLeap.otf") format("opentype");
+}

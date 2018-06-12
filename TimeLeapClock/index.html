@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <title>TimeLeapClock</title>
+
+  <meta name="name" content="TimeLeapClock">
+  <meta name="description" content="時かけの時計">
+  <meta name="keywords" content="時かけ,時をかける少女,時計,タイムリープ">
+  <meta property="og:title" content="TimeLeapClock">
+  <meta property="og:description" content="時かけの時計">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+
+  <link rel="icon" href="./favicon/favicon16.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon/favicon32.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon/favicon48.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon/favicon64.ico" type="image/x-icon">
+  <link rel="icon" href="./favicon/favicon16.png" sizes="16x16">
+  <link rel="icon" href="./favicon/favicon32.png" sizes="32x32">
+  <link rel="icon" href="./favicon/favicon48.png" sizes="48x48">
+  <link rel="icon" href="./favicon/favicon96.png" sizes="96x96">
+  <link rel="icon" href="./favicon/favicon192.png" sizes="192x192">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon57.png" sizes="57x57">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon60.png" sizes="60x60">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon144.png" sizes="144x144">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon152.png" sizes="152x152">
+  <link rel="apple-touch-icon" href="./apple-touch-icon/apple-touch-icon180.png" sizes="180x180">
+
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <script type="text/javascript">
+    setInterval(clock, 30);
+
+    function padding(num) {
+      var ret;
+      if(num < 10){
+        ret = "0" + num;
+      }
+      else{
+        ret = num
+      }
+      return ret;
+    }
+
+    function clock() {
+      var now = new Date();
+      var year = padding(now.getFullYear());
+      var mon = padding(now.getMonth() + 1);
+      var day = padding(now.getDate());
+      var hour = padding(now.getHours());
+      var min = padding(now.getMinutes());
+      var sec = padding(now.getSeconds());
+      var msec = padding(Math.floor(now.getMilliseconds() / 10));
+
+      time = year + ":" + mon + ":" + day + ":" + hour + ":" + min + ":" + sec + ":" + msec
+
+      document.getElementById("clock").innerHTML = time;
+    }
+
+    window.onload = function(){
+      document.body.onclick = function(){
+        if(this.webkitRequestFullscreen){
+          this.webkitRequestFullscreen();
+        } else if(this.mozRequestFullScreen){
+          this.mozRequestFullScreen();
+        } else if(this.msRequestFullscreen){
+          this.msRequestFullscreen();
+        } else if(this.requestFullscreen){
+          this.requestFullscreen();
+        } else{
+          return;
+        }
+      }
+    }
+  </script>
+
+  <link rel="manifest" href="./manifest.json">
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('./service-worker.js').then(function() { console.log('Service Worker Registered'); });
+    }
+  </script>
+</head>
+<body>
+  <p id="clock"></p>
+</body>
+</html>
